@@ -94,7 +94,7 @@ button:hover { background:#fff; color:#8d055b; transform: scale(1.08); }
 
 /* modal vitória */
 #video-modal { position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 999; display:flex; flex-direction:column; justify-content:center; align-items:center; }
-#video-modal video { width: 80%; max-width:650px; border-radius:20px; box-shadow:0 0 30px rgba(255,255,255,0.4); border:3px solid #fff; }
+#video-modal video { width: 100%; max-width:1000px; border-radius:20px; box-shadow:0 0 3px rgba(255,255,255,0.4); border:3px solid #fff; }
 #fechar-video { margin-top:20px; background-color:#ff0a7a; border-color:#fff; font-size:18px; padding:10px 25px; border-radius:30px; }
 
 /* helpers */

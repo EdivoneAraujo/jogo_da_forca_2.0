@@ -32,7 +32,7 @@ body, .container, #menu, #jogo {
     align-items: center;
     position: absolute;
     left: 52%;
-    top: 40%;
+    top: 42%;
     transform: translate(-50%, -50%);
     z-index: 10;
 }
@@ -47,9 +47,9 @@ body, .container, #menu, #jogo {
 }
 
 /* textos */
-h1 { margin: 0 0 10px 0; font-size: 1.5vw; color: #ffeb3b; letter-spacing: 2px; }
-h2 { font-size: 1.5vw; margin: 0; }
-p { font-size: 1.5vw; margin: 0; }
+h1 { margin: 0 0 10px 0; font-size: 1.5em; color: #ffeb3b; letter-spacing: 2px; }
+h2 { font-size: 1.5em; margin: 0; }
+p { font-size: 1.5em; margin: 0; }
 
 /* inputs/botões */
 select, input {
@@ -60,7 +60,7 @@ select, input {
     background-color: rgba(0,0,0,0.4);
     color: #fff;
     font-family: 'Patrick Hand', cursive;
-    font-size: 1.3vw;
+    font-size: 1.3em;
     outline: none;
     width: 50%;
     transition: 0.3s;
@@ -78,7 +78,7 @@ button {
     padding: 6px 4px;
     border-radius: 25px;
     cursor: pointer;
-    font-size: 0.9vw;
+    font-size: 0.9em;
     font-weight: bold;
     transition: all 0.25s ease;
     margin-top: 10px;
@@ -88,9 +88,9 @@ button {
 button:hover { background:#fff; color:#8d055b; transform: scale(1.08); }
 
 /* palavra, dicas, mensagens */
-#palavra { font-size: 2vw; letter-spacing: 12px; margin: 10px 0; font-weight: bold; border-bottom: 2px dashed rgba(255,255,255,0.4); padding-bottom:7px; }
-.dicas { margin-top:8px; font-size:1.1vw; color:#ffeb3b; min-height:25px; font-weight:bold; }
-#mensagem { font-size:1.1vw; font-weight:bold; color:#ffeb3b; min-height:30px; margin-bottom:8px; }
+#palavra { font-size: 2em; letter-spacing: 12px; margin: 5px 0; font-weight: bold; border-bottom: 2px dashed rgba(255,255,255,0.4); padding-bottom:7px; }
+.dicas { margin-top:10px; font-size:1.3em; color:#ffeb3b; min-height:25px; font-weight:bold; }
+#mensagem { font: size 1.1em; font-weight:bold; color:#ffeb3b; min-height:10px; margin-bottom:8px; }
 
 /* modal vitória */
 #video-modal { position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 999; display:flex; flex-direction:column; justify-content:center; align-items:center; }

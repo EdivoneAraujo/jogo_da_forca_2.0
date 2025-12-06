@@ -66,8 +66,15 @@ function atualizarDica() {
     if (!selectTema || !selectNivel) return;
     const tema = selectTema.value;
     const nivel = selectNivel.value;
-    dicasDiv.textContent = (tema && nivel) ? temas[tema][nivel].dica : "💡 Escolha tema e nível...";
+    const dicaTexto = (tema && nivel) ? temas[tema][nivel].dica : "💡 Escolha tema e nível...";
+
+    const dicaMenu = document.getElementById("dica-menu");
+    const dicaJogo = document.getElementById("dica-jogo");
+
+    if (dicaMenu) dicaMenu.textContent = dicaTexto;
+    if (dicaJogo) dicaJogo.textContent = dicaTexto;
 }
+
 
 function iniciarJogo() {
     if (!selectTema || !selectNivel) return;

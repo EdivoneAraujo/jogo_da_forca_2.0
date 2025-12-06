@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+/* === INTRO FULLSCREEN === */
+#intro-modal {
+    position: fixed;
+    inset: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999;
+    padding: 0;
+}
+
+#intro-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#pular-intro {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background: rgba(255,255,255,0.9);
+    color: #000;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    z-index: 10000;
+    border: none;
+}
+
+/* === ESTILO BASE === */
+body {
+    font-family: 'Patrick Hand', cursive, sans-serif;
+    background: url('imagens/ssala.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* entrada */
+body, .container, #menu, #jogo {
+    animation: fadeIn 0.6s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* container */
+.container {
+    width: 70%;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 52%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.conteudo {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+}
+
+/* textos */
+h1 { margin: 0 0 10px 0; font-size: 1.5vw; color: #ffeb3b; letter-spacing: 2px; }
+h2 { font-size: 1.5vw; margin: 0; }
+p { font-size: 1.5vw; margin: 0; }
+
+/* inputs/botões */
+select, input {
+    margin: 5px;
+    padding: 8px;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.3vw;
+    outline: none;
+    width: 50%;
+    transition: 0.3s;
+}
+
+select option { background-color: #333; color: #fff; }
+input::placeholder { color: #ddd; }
+input:focus, select:focus { transform: scale(1.05); border-color: #ffeb3b; }
+
+/* botões */
+button {
+    background: linear-gradient(90deg,#8d055b,#ff0a7a);
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 6px 4px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 0.9vw;
+    font-weight: bold;
+    transition: all 0.25s ease;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+button:hover { background:#fff; color:#8d055b; transform: scale(1.08); }
+
+/* palavra, dicas, mensagens */
+#palavra { font-size: 2vw; letter-spacing: 12px; margin: 10px 0; font-weight: bold; border-bottom: 2px dashed rgba(255,255,255,0.4); padding-bottom:7px; }
+.dicas { margin-top:8px; font-size:1.1vw; color:#ffeb3b; min-height:25px; font-weight:bold; }
+#mensagem { font-size:1.1vw; font-weight:bold; color:#ffeb3b; min-height:30px; margin-bottom:8px; }
+
+/* modal vitória */
+#video-modal { position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 999; display:flex; flex-direction:column; justify-content:center; align-items:center; }
+#video-modal video { width: 80%; max-width:650px; border-radius:20px; box-shadow:0 0 30px rgba(255,255,255,0.4); border:3px solid #fff; }
+#fechar-video { margin-top:20px; background-color:#ff0a7a; border-color:#fff; font-size:18px; padding:10px 25px; border-radius:30px; }
+
+/* helpers */
+.hidden { display:none !important; }
+
+/* responsivo */
+@media (max-width:768px) {
+    body { background: url('imagens/sala_retrato.jpg') no-repeat center center; background-size: cover; }
+    .container { width:90%; top:37%; height:70vh; }
+    h1{ font-size:30px; } button, select, input, p, .dicas { font-size:22px; } #palavra { font-size:22px; letter-spacing:6px; }
+}
+@media (max-width:500px) {
+    body { background: url('imagens/sala_3.jpg') no-repeat center top; background-size:115%; }
+    .container { width:95%; top:42%; }
+    h1{ font-size:22px; } h2,p{ font-size:16px; } select,input{ width:85%; font-size:14px; padding:5px; } button{ font-size:14px; padding:6px 12px; }
+    #palavra{ font-size:16px; letter-spacing:4px; } .dicas{ font-size:14px; } #mensagem{ font-size:16px; } #video-modal video{ width:95%; }
+}
+@media (max-width:350px) {
+    body { background: url('imagens/sala_aula_2.2.jpg') no-repeat center top; background-size:cover; }
+    .container { width:80%; top:50%; }
+}

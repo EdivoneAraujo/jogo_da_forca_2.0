@@ -13,7 +13,7 @@ const temas = {
     frutas: {
         1: { palavras: ["abacate","uva","banana","laranja","morango","abacaxi","manga","pera","caju","melancia","limao","melao","maca"], dica: "🍌 Frutas comuns" },
         2: { palavras: ["abacate","cupuacu","pitanga","buriti","coco","caju","melancia","kiwi","ameixa","goiaba","maracuja","pessego","cereja","graviola","figo","acerola","jabuticaba"], dica: "🇧🇷 Frutas variadas" },
-        3: { palavras: ["abacate","umbu","pequi","acai","figo","cacau","jabuticaba","pitanga","tamarindo","roma","carambola","cupuacu","jaca","pitaya","marolo","mirtilo","cacau","seriguela","pitomba"], dica: "🥭 Frutas exóticas" }
+        3: { palavras: ["abacate","umbu","pequi","acai","figo","cacau","jabuticaba","pitanga","tamarindo","roma","carambola","cupuacu","jaca","pitaya","marolo","mirtilo","cacau","seriguela","pitomba"], dica: "🥭 Frutas exóticos" }
     }
 };
 
@@ -30,7 +30,6 @@ const chancesSpan = document.getElementById("chances");
 const usadasSpan = document.getElementById("usadas");
 const mensagem = document.getElementById("mensagem");
 const letraInput = document.getElementById("letra");
-const dicasDiv = document.getElementById("dicas");
 const videoModal = document.getElementById("video-modal");
 const playerVideo = document.getElementById("player-video");
 const btnFecharVideo = document.getElementById("fechar-video");
@@ -75,7 +74,6 @@ function atualizarDica() {
     if (dicaJogo) dicaJogo.textContent = dicaTexto;
 }
 
-
 function iniciarJogo() {
     if (!selectTema || !selectNivel) return;
     const tema = selectTema.value;
@@ -90,6 +88,7 @@ function iniciarJogo() {
     menu.classList.add("hidden");
     jogo.classList.remove("hidden");
     atualizarTela();
+    atualizarDica();
 }
 
 function atualizarTela() {
@@ -130,11 +129,30 @@ function verificarFimDeJogo() {
     if (!palavraSecreta) return;
     const venceu = palavraSecreta.split("").every(l => letrasUsadas.includes(l));
 
-    if (venceu) { exibirVideoVitoria(); return; }
-    if (chances <= 0) {
-        mostrarMensagem(`😢 Poxa! A palavra era "${palavraSecreta}".`, "#ffeb3b");
+    if (venceu) {
+        // Exibe mensagem de vitória por 3 segundos
+        mostrarMensagem(`🎉 A palavra é "${palavraSecreta}" 🎉`, "#ffeb3b");
         if (letraInput) letraInput.disabled = true;
         if (btnTentar) btnTentar.disabled = true;
+
+        setTimeout(() => {
+            exibirVideoVitoria();
+        }, 3000);
+
+        return;
+    }
+    
+    if (chances <= 0) {
+        if (letraInput) letraInput.disabled = true;
+        if (btnTentar) btnTentar.disabled = true;
+
+        // Mostra mensagem de derrota
+        mostrarMensagem(`😢 Poxa! A palavra era "${palavraSecreta}".`, "#ffeb3b");
+
+        // Esconde a tela do jogo após 3 segundos e reinicia
+        setTimeout(() => {
+            reiniciarJogo();
+        }, 3000);
     }
 }
 
@@ -161,7 +179,13 @@ function resetGameState() {
     if (btnTentar) btnTentar.disabled = false;
     if (usadasSpan) usadasSpan.textContent = "";
     if (chancesSpan) chancesSpan.textContent = chances;
-    if (dicasDiv) dicasDiv.textContent = "💡 Dica aparecerá aqui...";
+
+    const dicaMenu = document.getElementById("dica-menu");
+    const dicaJogo = document.getElementById("dica-jogo");
+
+    if (dicaMenu) dicaMenu.textContent = "💡 Dica aparecerá aqui...";
+    if (dicaJogo) dicaJogo.textContent = "💡 Dica aparecerá aqui...";
+
     atualizarTela();
 }
 

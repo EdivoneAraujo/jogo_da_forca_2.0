@@ -1,0 +1,11 @@
+gato
+cachorro
+coelho
+peixe
+tartaruga
+pato
+vaca
+porco
+cavalo
+galinha
+ovelha

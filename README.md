@@ -1,5 +1,5 @@
 <h1 align="center">🎨 Jogo da Forca 2.0 – Edição Gráfica Melhorada</h1>
-<p align="center"> <img src="./gif/Jogo-da-Forca.gif" alt="Gif da Interface do Jogo da Forca 2.0" width="100%"> </p> <p align="center"> <img src="https://img.shields.io/badge/Feito%20com-Python-3776AB?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-orange?style=for-the-badge&logo=html5"> <img src="https://img.shields.io/badge/CSS3-2965f1?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/Status-%F0%9F%9A%80%20Ativo-blue?style=for-the-badge"> </p> <h3 align="center">✨ Criado por <b>Edivone Araújo</b> e <b>Vanessa Taurino</b> ✨</h3> <p align="center"><i>“O clássico jogo da forca agora ganhou vida!”</i></p>
+<p align="center"> <img src="./gif/Jogo-da-Forca.gif" alt="Gif da Interface do Jogo da Forca 2.0" width="100%"> </p> <p align="center"> <img src="https://img.shields.io/badge/Feito%20com-Python-3776AB?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-orange?style=for-the-badge&logo=html5"> <img src="https://img.shields.io/badge/CSS3-2965f1?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> <img src="https://img.shields.io/badge/Status-%F0%9F%9A%80%20Concluído-green?style=for-the-badge"> </p> <h3 align="center">✨ Criado por <b>Edivone Araújo</b> e <b>Vanessa Taurino</b> ✨</h3> <p align="center"><i>“O clássico jogo da forca agora ganhou vida!”</i></p>
 
 ---
 ## 🌐 Acesse o Jogo Online
@@ -155,4 +155,5 @@ Vercel-------------Deploy da versão web
 ## 🏁 Licença
 
 Este projeto está licenciado sob a MIT License.
+
 

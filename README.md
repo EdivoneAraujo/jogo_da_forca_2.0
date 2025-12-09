@@ -4,7 +4,7 @@
 ---
 ## 🌐 Acesse o Jogo Online
 **🎮 Jogue agora:**
-👉 https://jogo-da-forca-2.0.vercel.app/
+👉 https://jogo-da-forca-2-0.vercel.app/
 
 ---
 ## 💡 Sobre o Projeto
@@ -155,3 +155,4 @@ Vercel-------------Deploy da versão web
 ## 🏁 Licença
 
 Este projeto está licenciado sob a MIT License.
+
